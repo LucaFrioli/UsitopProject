@@ -11,7 +11,7 @@ const homeController = require(path.resolve(__dirname, 'src', 'controllers', 'ho
 //definição das rotas, sempre colocar um comentário indicando a qual página as rotas da seção pertencem ex :  pertence  
 
 //rotas da página index.ejs
-routes.get('/', homeController.getIndex);
+routes.get('/contato.html', homeController.getIndex);
 
 
 //rotass referentes a página (...)
