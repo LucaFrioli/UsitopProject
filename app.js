@@ -1,6 +1,7 @@
 // importações de dependencias e módulos nativos
 const express = require('express');
 const path = require('path');
+const helmet = require('helmet');
 
 //chamada de arquivos
 const routes = require(path.resolve(__dirname, 'routes.js'));
@@ -11,6 +12,7 @@ const app = express();
 const port = 3000;
 
 //uso de middlewares do express e outras dependencias
+app.use(helmet());
 app.use(express.urlencoded({ extended: true })); //Habilita o recebimento de estruturas de dados (arrays e objetos) via metodo post
 app.use(express.static(path.resolve(__dirname, 'public')));//Habilita o uso das páginas estáticas apartir da pasta public
 
