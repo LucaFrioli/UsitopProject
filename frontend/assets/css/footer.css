@@ -1,3 +1,13 @@
 #top-footer {
     background-color: #2D485F;
-}
+};
+
+#background-logo-footer {
+    opacity: 15%;
+    justify-content: center;
+};
+
+.icon-13 {
+    height: 13px;
+    width: 13px;
+};

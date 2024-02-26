@@ -1,6 +1,32 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./frontend/productsPage/readMore.js":
+/*!*******************************************!*\
+  !*** ./frontend/productsPage/readMore.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+exports.addingInfo = function (el) {
+  switch (el.parentNode.id) {
+    case 'moldes':
+      console.log('sou o conteúdo do botão de moldes');
+      break;
+    case 'matrizes':
+      console.log('sou o conteúdo vindo do botão de matrizes ');
+      break;
+    case 'eletroErosao':
+      console.log('sou o conteúdo do botão de eletroErosao');
+      break;
+    case 'usinagens':
+      console.log('sou o conteúdo do botão de usinagens');
+      break;
+  }
+  console.log(el.parentNode);
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./frontend/assets/css/body.css":
 /*!****************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./frontend/assets/css/body.css ***!
@@ -84,7 +110,17 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#top-footer {
     background-color: #2D485F;
-}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/footer.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B","sourcesContent":["#top-footer {\r\n    background-color: #2D485F;\r\n}"],"sourceRoot":""}]);
+};
+
+#background-logo-footer {
+    opacity: 15%;
+    justify-content: center;
+};
+
+.icon-13 {
+    height: 13px;
+    width: 13px;
+};`, "",{"version":3,"sources":["webpack://./frontend/assets/css/footer.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B,CAAA;;AAEA;IACI,YAAY;IACZ,uBAAuB;AAC3B,CAAA;;AAEA;IACI,YAAY;IACZ,WAAW;AACf,CAAA","sourcesContent":["#top-footer {\r\n    background-color: #2D485F;\r\n};\r\n\r\n#background-logo-footer {\r\n    opacity: 15%;\r\n    justify-content: center;\r\n};\r\n\r\n.icon-13 {\r\n    height: 13px;\r\n    width: 13px;\r\n};"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22831,19 +22867,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _assets_css_card_carousel_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/css/card-carousel.css */ "./frontend/assets/css/card-carousel.css");
-/* harmony import */ var _assets_css_body_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/css/body.css */ "./frontend/assets/css/body.css");
-/* harmony import */ var _assets_css_hero2_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/css/hero2.css */ "./frontend/assets/css/hero2.css");
-/* harmony import */ var _assets_css_navbar_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/css/navbar.css */ "./frontend/assets/css/navbar.css");
-/* harmony import */ var _assets_css_footer_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/css/footer.css */ "./frontend/assets/css/footer.css");
+/* harmony import */ var _productsPage_readMore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./productsPage/readMore */ "./frontend/productsPage/readMore.js");
+/* harmony import */ var _assets_css_card_carousel_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/css/card-carousel.css */ "./frontend/assets/css/card-carousel.css");
+/* harmony import */ var _assets_css_body_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/css/body.css */ "./frontend/assets/css/body.css");
+/* harmony import */ var _assets_css_hero2_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/css/hero2.css */ "./frontend/assets/css/hero2.css");
+/* harmony import */ var _assets_css_navbar_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/css/navbar.css */ "./frontend/assets/css/navbar.css");
+/* harmony import */ var _assets_css_footer_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/css/footer.css */ "./frontend/assets/css/footer.css");
  //linha para otimização de código e inclusão de navegadores antigos
  //linha para otimização de código e inclusão de navegadores antigos
+
+// chamada para arquivos js
+
+
 //chamadas para css
 
 
 
 
 
+if (window.location.href === "http://localhost:3000/produtos.html") {
+  var section = document.querySelector('#productsInformationsSection');
+  var buttons = section.querySelectorAll('button.readMore');
+  buttons.forEach(function (el) {
+    el.addEventListener('click', function () {
+      (0,_productsPage_readMore__WEBPACK_IMPORTED_MODULE_2__.addingInfo)(el);
+    });
+  });
+}
 })();
 
 /******/ })()
