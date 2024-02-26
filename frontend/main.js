@@ -10,6 +10,8 @@ import './assets/css/body.css'
 import './assets/css/hero2.css'
 import './assets/css/navbar.css'
 import './assets/css/footer.css'
+import './assets/css/hero-message.css'
+
 
 if (window.location.href === "http://localhost:3000/produtos.html") {
     const section = document.querySelector('#productsInformationsSection');
