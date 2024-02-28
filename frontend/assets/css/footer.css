@@ -1,13 +1,21 @@
 #top-footer {
     background-color: #2D485F;
-};
+    margin: 0;
+}
+
+#bg-image{
+    background-image: url(../icon/logo_usitop_footer.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 2rem;
+}
 
 #background-logo-footer {
     opacity: 15%;
     justify-content: center;
-};
+}
 
 .icon-13 {
     height: 13px;
     width: 13px;
-};
+}

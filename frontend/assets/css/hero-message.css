@@ -1,3 +1,11 @@
 #hero-message{
     background-color: #2D485F40;
 }
+
+#text-color{
+    color: #193046;
+}
+
+.text-right{
+    text-align: right;
+}
