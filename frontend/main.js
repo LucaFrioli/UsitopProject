@@ -6,7 +6,7 @@ import {addingInfo} from './productsPage/readMore';
 
 //chamadas para css
 import './assets/css/card-carousel.css'
-import './assets/css/body.css'
+import './assets/css/font_Controller.css'
 import './assets/css/hero2.css'
 import './assets/css/navbar.css'
 import './assets/css/footer.css'
