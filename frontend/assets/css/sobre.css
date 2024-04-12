@@ -1,0 +1,6 @@
+#usitop-image {
+    background-image: url(../icon/LogoNome.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 2rem;
+}
