@@ -1,6 +1,16 @@
-#usitop-image {
-    background-image: url(../icon/LogoNome.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding: 2rem;
+#sobre-usitop-image {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    opacity: 25%;
+    
+}
+
+#sobre-btn-contato {
+    background-color: #193046;
+}
+
+#sobre-icon {
+    max-width: 100px;
+    max-height: 100px;
 }
