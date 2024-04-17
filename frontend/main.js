@@ -12,6 +12,7 @@ import './assets/css/navbar.css'
 import './assets/css/footer.css'
 import './assets/css/hero-message.css'
 import './assets/css/sobre.css'
+import './assets/css/produtos.css'
 
 
 if (window.location.href === "http://localhost:3000/produtos.html") {
