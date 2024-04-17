@@ -31,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&family=Oxygen&display=swap"
     rel="stylesheet">
 
-  <title>Usitop - Produtos</title>
+  <title>Usitop - Contato</title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
             <a class="nav-link" href="./index.html">Home</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#">Produtos</a>
+            <a class="nav-link" href="./produtos.html">Produtos</a>
           </li>
           <li class="nav-item mx-3">
             <a class="nav-link" href="./contato.html">Contato</a>
@@ -64,34 +64,32 @@
     </div>
   </nav>
 
-  <section id="productsInformationsSection">
-    <div class="col">
-      <div class="row">
-        <div class="light-products-container" id="moldes">
-          <h1>Moldes</h1>
-          <button class="readMore">Leia Mais</button>
-          <div class="inject-content"></div>
-        </div>
-        <div class="bold-products-container" id="matrizes">
-          <h1>Matrizes</h1>
-          <button class="readMore">Leia Mais</button>
-          <div class="inject-content"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="bold-products-container" id="eletroErosao">
-          <h1>Eletro Erosão</h1>
-          <button class="readMore">Leia Mais</button>
-          <div class="inject-content"></div>
-        </div>
-        <div class="light-products-container" id="usinagens">
-          <h1>Usinagens</h1>
-          <button class="readMore">Leia Mais</button>
-          <div class="inject-content"></div>
-        </div>
+  <!-- CORPO -->
+  <div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 text-center">
+        <h1><strong>ENTRE EM CONTATO COM A GENTE</strong></h1>
+        <p class="mt-2" style="font-size: 24px;">Caso tenha alguma dúvida a respeito da nossa empresa, ou gostaria de iniciar um projeto conosco, ficamos a disposição para atendê-lo via Email.<br>Nossa equipe especializada irá te dar o suporte e atendimento desejado.<br>Fale conosco!</p>
       </div>
     </div>
-  </section>
+    <div class="row mt-5 pt-5 justify-content-center">
+      <div class="col-lg-5 text-center">
+        <form method="#" action="#" class="form-group">
+          <input type="text" class="form-control" id="nome" placeholder="Nome">
+          <div class="row my-2">
+            <div class="col">
+              <input type="email" class="form-control" id="email" placeholder="nome@examplo.com">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="telefone" placeholder="Número de contato">
+            </div>
+          </div>
+          <textarea class="form-control" id="message" placeholder="Insira aqui sua mensagem ..." style="height: 150px;"></textarea>
+          <button type="submit" class="btn mt-2 btn-success" style="width: 100%;">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="mt-3 text-white">
@@ -170,7 +168,8 @@
     </div>
     <!-- BOTTOM FOOTER -->
     <div class="container-fluid p-5" id="bottom-footer">
-      <p class="smallest-footer-text text-center mb-0">©2023. Usitop - Usinagem e Ferramentaria.<br>Todos os direitos
+      <p class="smallest-footer-text text-center mb-0">©2023. Usitop - Usinagem e Ferramentaria.<br>Todos os
+        direitos
         reservados</p>
     </div>
   </footer>
