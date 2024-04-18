@@ -10,7 +10,7 @@
     </div>
     <div class="row mt-5 pt-5 justify-content-center">
       <div class="col-lg-5 text-center">
-        <form method="#" action="#" class="form-group">
+        <form method="post" action="/contato" class="form-group">
           <input type="text" class="form-control" id="nome" placeholder="Nome">
           <div class="row my-2">
             <div class="col">
@@ -22,6 +22,7 @@
           </div>
           <textarea class="form-control" id="message" placeholder="Insira aqui sua mensagem ..." style="height: 150px;"></textarea>
           <button type="submit" class="btn mt-2 btn-success" style="width: 100%;">Enviar</button>
+		  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         </form>
       </div>
     </div>

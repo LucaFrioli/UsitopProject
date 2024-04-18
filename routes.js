@@ -29,6 +29,7 @@ routes.get('/', homeController.getIndex);
 
 // rotas da página contato.ejs
 routes.get('/contato', contatoController.getContato);
+routes.post('/contato', contatoController.postContato);
 
 // rotas da página produtos.ejs
 routes.get('/produtos', produtosController.getProdutos);
