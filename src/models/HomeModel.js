@@ -5,7 +5,7 @@ const phoneUtil = PhoneNumberUtil.getInstance();
 const homeSchema = new mongoose.Schema({
 	clientName: { type: String, required: true },
 	clientCellphone: { type: String, required: true },
-	clientEmail: { type: String, required: true, unique: true },
+	clientEmail: { type: String, required: true },
 	clientMessage: { type: String, required: true }
 });
 
@@ -20,8 +20,6 @@ class HomeModel {
 	}
 
 	create() {
-
-
 		homeModel
 			.create({
 				clientName: this.clientName,

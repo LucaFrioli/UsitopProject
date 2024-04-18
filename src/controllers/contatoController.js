@@ -8,6 +8,7 @@ exports.getContato = (req, res) => {
 
 exports.postContato = (req, res) => {
 	const { nome, telefone, email, message } = req.body;
+	console.log(req.body);
 	try {
 		new HomeModel(nome, telefone, email, message).create();
 	} catch (e) {
