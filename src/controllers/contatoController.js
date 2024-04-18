@@ -1,5 +1,6 @@
 const pageName = 'contato';
+const data = {location : pageName}
 
 exports.getContato = (req, res) => {
-    res.render(pageName);
+    res.render(pageName, data);
 }

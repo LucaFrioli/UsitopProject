@@ -1,5 +1,6 @@
 const pageName = 'sobre';
+const data = {location : pageName};
 
 exports.getSobre = (req, res) => {
-	res.render(pageName);
+	res.render(pageName, data);
 };

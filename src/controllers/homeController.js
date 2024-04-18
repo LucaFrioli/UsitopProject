@@ -1,6 +1,6 @@
 const pageName = 'index';
+const data = {location : pageName};
 
 exports.getIndex = (req, res) => {
-	// aqui está ocorrendo a renderização do index.ejs como exemplo
-	res.render(pageName);
+	res.render(pageName, data);
 };

@@ -1,5 +1,6 @@
 const pageName = 'produtos';
+const data = {location : pageName};
 
 exports.getProdutos = (req, res) => {
-    res.render(pageName);
+    res.render(pageName, data);
 }
