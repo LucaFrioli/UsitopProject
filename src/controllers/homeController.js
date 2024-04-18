@@ -1,4 +1,4 @@
-const pageName = 'contato';
+const pageName = 'index';
 
 exports.getIndex = (req, res) => {
 	// aqui está ocorrendo a renderização do index.ejs como exemplo
