@@ -24,9 +24,9 @@ class HomeModel {
 
 		homeModel
 			.create({
-				name: this.clientName,
-				cellphone: this.clientCellphone,
-				email: this.clientEmail,
+				clientName: this.clientName,
+				clientCellphone: this.clientCellphone,
+				clientEmail: this.clientEmail,
 				clientMessage: this.clientMessage
 			})
 			.then((data) => {
