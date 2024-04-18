@@ -1,6 +1,30 @@
 <%- include('includes/header'); -%>
 
-    <h1>Estou sendo renderizado no backend</h1>
-    <%= demo %>
+<!-- CORPO -->
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 text-center">
+        <h1><strong>ENTRE EM CONTATO COM A GENTE</strong></h1>
+        <p class="mt-2" style="font-size: 24px;">Caso tenha alguma dúvida a respeito da nossa empresa, ou gostaria de iniciar um projeto conosco, ficamos a disposição para atendê-lo via Email.<br>Nossa equipe especializada irá te dar o suporte e atendimento desejado.<br>Fale conosco!</p>
+      </div>
+    </div>
+    <div class="row mt-5 pt-5 justify-content-center">
+      <div class="col-lg-5 text-center">
+        <form method="#" action="#" class="form-group">
+          <input type="text" class="form-control" id="nome" placeholder="Nome">
+          <div class="row my-2">
+            <div class="col">
+              <input type="email" class="form-control" id="email" placeholder="nome@examplo.com">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="telefone" placeholder="Número de contato">
+            </div>
+          </div>
+          <textarea class="form-control" id="message" placeholder="Insira aqui sua mensagem ..." style="height: 150px;"></textarea>
+          <button type="submit" class="btn mt-2 btn-success" style="width: 100%;">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 <%- include('includes/footer') -%>

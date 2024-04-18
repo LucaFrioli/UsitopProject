@@ -1,8 +1,8 @@
-.cards-wrapper{
-    display: flex;
+.cards-wrapper {
+	display: flex;
 }
 
-.card{
-    margin: 0.5rem;
-    width: calc(100%/2);
+.card {
+	margin: 0.5rem;
+	width: calc(100% / 2);
 }

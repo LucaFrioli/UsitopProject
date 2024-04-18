@@ -1,30 +1,67 @@
-// importações de dependencias e módulos nativos
-const express = require('express');
 const path = require('path');
-const helmet = require('helmet');
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+const session = require('express-session');
+const Store = require('connect-mongo');
+const flash = require('connect-flash');
+const csrf = require('csurf');
 
-//chamada de arquivos
 const routes = require(path.resolve(__dirname, 'routes.js'));
-const { demoMidd } = require(path.resolve(__dirname, 'src', 'middlewares', 'globalsMiddleware.js'));// cahamda com desestruturação de objeto
-
-//criação de variaveis
+const { demo, csrfCheckErr, csrfMidd } = require(
+	path.resolve(__dirname, 'src', 'middlewares', 'globalsMiddleware.js')
+);
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+const daySessionsEnable = 7;
 
-//uso de middlewares do express e outras dependencias
-app.use(helmet());
-app.use(express.urlencoded({ extended: true })); //Habilita o recebimento de estruturas de dados (arrays e objetos) via metodo post
-app.use(express.static(path.resolve(__dirname, 'public')));//Habilita o uso das páginas estáticas apartir da pasta public
+if (process.env.PRODUCTION === 'y') {
+	const helmet = require('helmet');
+	app.use(helmet());
+}
+// conexão como banco de dados :
+mongoose
+	.connect(process.env.CONNECTIONSTRING)
+	.then(() => {
+		app.emit('connected');
+	})
+	.catch((e) => {
+		console.log(e);
+		app.get('/404', (req, res) => {
+			res.render('404');
+		});
+	});
+//
 
-//uso de middlewares criados no projeto OBS : os middlewares globais, deverão sempre ser adicionados antes das rotas, para que a ordem de execução e consequentemente o bom funcionamento ocorra
-app.use(demoMidd);
+// configuração de sessão
+const SessionConfig = session({
+	secret: process.env.SECRETSESSIONENTRY,
+	store: Store.create({ mongoUrl: process.env.CONNECTIONSTRING }),
+	resave: false,
+	saveUninitialized: false,
+	cookie: {
+		maxAge: 1000 * 60 * 60 * 24 * daySessionsEnable,
+		httpOnly: true
+	}
+});
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(flash());
+
+app.use(SessionConfig);
+app.use(csrf());
+app.use(csrfCheckErr);
+app.use(csrfMidd);
+app.use(demo);
 app.use(routes);
 
-//view engine
-app.set('views', path.resolve(__dirname, 'src', 'views'));// definição da pasta referente as views do projeto 
-app.set('view engine', 'ejs');// definindo o motor de renderização e componentização do projeto
+app.set('views', path.resolve(__dirname, 'src', 'views'));
+app.set('view engine', 'ejs');
 
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta : ${port}`);
-    console.log(`Acesse : http://localhost:${port}`);
+app.on('connected', () => {
+	app.listen(port, () => {
+		console.log(`Aplicação rodando na porta ${port}`);
+		console.log(`Acesse: http://localhost:${port}`);
+	});
 });

@@ -2,12 +2,12 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -16,26 +16,26 @@
 
     <!-- FONTS -->
     <!-- Conexão Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- League Spartan -->
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap" rel="stylesheet" />
 
     <!-- Oxygen -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&family=Oxygen&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <title>Usitop - Home</title>
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow">
+    <nav class="navbar navbar-expand-lg bg-white shadow">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src=".\assets\img\usitop-3.png" alt="Logomarca da Usitop" height="40">
@@ -47,32 +47,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <% if(location === 'index'){ %>
-                        <a class="nav-link" href="#">Home</a>
-                        <% } else { %>
                         <a class="nav-link" href="./index.html">Home</a>
-                        <% } %>
                     </li>
                     <li class="nav-item mx-3">
-                        <% if(location === 'produtos'){ %>
-                            <a class="nav-link" href="#">Produtos</a>
-                        <% } else { %>
                         <a class="nav-link" href="./produtos.html">Produtos</a>
-                        <% } %>
                     </li>
                     <li class="nav-item mx-3">
-                        <% if(location === 'contato'){ %>
-                            <a class="nav-link" href="#">Contato</a>
-                        <% } else { %>
-                        <a class="nav-link" href="./contato.html">Contato</a>
-                        <% } %>
+                        <a class="nav-link" href="/contato">Contato</a>
                     </li>
                     <li class="nav-item ms-3">
-                        <% if(location === 'sobre'){ %>
-                            <a class="nav-link" href="#">Sobre</a>
-                        <% } else { %>
                         <a class="nav-link" href="./sobre.html">Sobre</a>
-                        <% } %>
                     </li>
                 </ul>
             </div>

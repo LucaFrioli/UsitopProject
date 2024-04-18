@@ -1,20 +1,20 @@
 #produtos-btn-contato {
-    background-color: #193046;
-    font-size: 24px;;
+	background-color: #193046;
+	font-size: 24px;
 }
 
 .card.produtos {
-    max-height: 370px;
-    height: 370px;
-    background: #2D485F;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+	max-height: 370px;
+	height: 370px;
+	background: #2d485f;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 }
 
 .card-title.produtos {
-    font-family: League Spartan;
-    font-size: 48px;
-    font-weight: 600;
-    letter-spacing: .2rem;
+	font-family: League Spartan;
+	font-size: 48px;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
 }
