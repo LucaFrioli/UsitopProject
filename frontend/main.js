@@ -14,7 +14,7 @@ import './assets/css/hero-message.css';
 import './assets/css/sobre.css';
 import './assets/css/produtos.css';
 
-if (window.location.href === 'http://localhost:3000/produtos.html') {
+if (window.location.href === 'http://localhost:3000/produtos') {
 	const section = document.querySelector('#productsInformationsSection');
 	const buttons = section.querySelectorAll('button.readMore');
 	buttons.forEach((el) => {

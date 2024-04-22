@@ -1,47 +1,39 @@
 exports.addingInfo = (el) => {
 	const parentDivID = el.parentNode.id;
-	switch (parentDivID) {
-		case 'moldes':
-			console.log('sou o conteúdo do botão de moldes');
-			break;
+	const card = document.querySelector('#' + parentDivID);
+	const title = document.querySelector('#title-' + parentDivID);
+	const text = document.querySelector('#text-' + parentDivID);
+	const btn = document.querySelector('#btn-' + parentDivID);
+	const btnStyle = btn.style;
 
-		case 'matrizes':
-			console.log('sou o conteúdo vindo do botão de matrizes ');
-			break;
+	const btnClassReducted = "btn btn-outline-light rounded-0 w-25 readMore";
 
-		case 'eletroErosao':
-			console.log('sou o conteúdo do botão de eletroErosao');
-			break;
+	if (text.style.display == "block") { // Exibição do título do card
+		// Organização do Card 
+		title.classList.remove("mt-5")
+		text.style.display = 'none';
+		card.style.justifyContent = "center";
 
-		case 'usinagens':
-			console.log('sou o conteúdo do botão de usinagens');
-			break;
-		default:
-			console.log('Não deu certo');
-			break;
+		// Estilização do botão
+		btn.className = btnClassReducted;
+		btn.innerHTML = "Leia Mais";
+		
+		btnStyle.alignSelf = "";
+		btnStyle.background = "";
+		btnStyle.border = "";
+
+	} else { // Exibição do conteúdo do card
+		// Organização do Card 
+		title.classList.add("mt-5")
+		text.style.display = 'block';
+		card.style.justifyContent = "space-between";
+
+		// Estilização do botão
+		btn.className = "p-2 readMore";
+		btn.innerHTML = "ver menos";
+
+		btnStyle.alignSelf = "flex-start";
+		btnStyle.background = "none";
+		btnStyle.border = "none";
 	}
 };
-
-function addingInfo(el) {
-	const parentDivID = el.parentNode.id;
-	switch (parentDivID) {
-		case 'moldes':
-			console.log('sou o conteúdo do botão de moldes');
-			break;
-
-		case 'matrizes':
-			console.log('sou o conteúdo vindo do botão de matrizes ');
-			break;
-
-		case 'eletroErosao':
-			console.log('sou o conteúdo do botão de eletroErosao');
-			break;
-
-		case 'usinagens':
-			console.log('sou o conteúdo do botão de usinagens');
-			break;
-		default:
-			console.log('Não deu certo');
-			break;
-	}
-}
