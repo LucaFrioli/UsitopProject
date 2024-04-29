@@ -1,6 +1,7 @@
 #produtos-btn-contato {
 	background-color: #193046;
 	font-size: 24px;
+	max-height: 75px;
 }
 
 .card.produtos {

@@ -9,44 +9,40 @@
 
 exports.addingInfo = function (el) {
   var parentDivID = el.parentNode.id;
-  switch (parentDivID) {
-    case 'moldes':
-      console.log('sou o conteúdo do botão de moldes');
-      break;
-    case 'matrizes':
-      console.log('sou o conteúdo vindo do botão de matrizes ');
-      break;
-    case 'eletroErosao':
-      console.log('sou o conteúdo do botão de eletroErosao');
-      break;
-    case 'usinagens':
-      console.log('sou o conteúdo do botão de usinagens');
-      break;
-    default:
-      console.log('Não deu certo');
-      break;
+  var card = document.querySelector('#' + parentDivID);
+  var title = document.querySelector('#title-' + parentDivID);
+  var text = document.querySelector('#text-' + parentDivID);
+  var btn = document.querySelector('#btn-' + parentDivID);
+  var btnStyle = btn.style;
+  var btnClassReducted = "btn btn-outline-light rounded-0 w-25 readMore";
+  if (text.style.display == "block") {
+    // Exibição do título do card
+    // Organização do Card 
+    title.classList.remove("mt-5");
+    text.style.display = 'none';
+    card.style.justifyContent = "center";
+
+    // Estilização do botão
+    btn.className = btnClassReducted;
+    btn.innerHTML = "Leia Mais";
+    btnStyle.alignSelf = "";
+    btnStyle.background = "";
+    btnStyle.border = "";
+  } else {
+    // Exibição do conteúdo do card
+    // Organização do Card 
+    title.classList.add("mt-5");
+    text.style.display = 'block';
+    card.style.justifyContent = "space-between";
+
+    // Estilização do botão
+    btn.className = "p-2 readMore";
+    btn.innerHTML = "ver menos";
+    btnStyle.alignSelf = "flex-start";
+    btnStyle.background = "none";
+    btnStyle.border = "none";
   }
 };
-function addingInfo(el) {
-  var parentDivID = el.parentNode.id;
-  switch (parentDivID) {
-    case 'moldes':
-      console.log('sou o conteúdo do botão de moldes');
-      break;
-    case 'matrizes':
-      console.log('sou o conteúdo vindo do botão de matrizes ');
-      break;
-    case 'eletroErosao':
-      console.log('sou o conteúdo do botão de eletroErosao');
-      break;
-    case 'usinagens':
-      console.log('sou o conteúdo do botão de usinagens');
-      break;
-    default:
-      console.log('Não deu certo');
-      break;
-  }
-}
 
 /***/ }),
 
@@ -157,7 +153,6 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#top-footer {
 	background-color: #2d485f;
-	/* background-image: url(./assets/img/logo_usitop_footer.svg); */
 }
 
 #bottom-footer {
@@ -188,7 +183,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#top-footer {
 	height: 13px;
 	width: 13px;
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/footer.css"],"names":[],"mappings":"AAAA;CACC,yBAAyB;CACzB,gEAAgE;AACjE;;AAEA;CACC,yBAAyB;AAC1B;AACA;CACC,iBAAiB;AAClB;AACA;CACC,iBAAiB;CACjB,yBAAyB;CACzB,SAAS;AACV;;AAEA;CACC,yDAAqD;CACrD,4BAA4B;CAC5B,kCAAkC;CAClC,aAAa;AACd;;AAEA;CACC,YAAY;CACZ,uBAAuB;AACxB;;AAEA;CACC,YAAY;CACZ,WAAW;AACZ","sourcesContent":["#top-footer {\r\n\tbackground-color: #2d485f;\r\n\t/* background-image: url(./assets/img/logo_usitop_footer.svg); */\r\n}\r\n\r\n#bottom-footer {\r\n\tbackground-color: #193046;\r\n}\r\n.smallest-footer-text {\r\n\tfont-size: 0.8rem;\r\n}\r\n.medium-footer-text {\r\n\tfont-size: 1.1rem;\r\n\tbackground-color: #2d485f;\r\n\tmargin: 0;\r\n}\r\n\r\n#bg-image {\r\n\tbackground-image: url(../icon/logo_usitop_footer.svg);\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n\tpadding: 2rem;\r\n}\r\n\r\n#background-logo-footer {\r\n\topacity: 15%;\r\n\tjustify-content: center;\r\n}\r\n\r\n.icon-13 {\r\n\theight: 13px;\r\n\twidth: 13px;\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./frontend/assets/css/footer.css"],"names":[],"mappings":"AAAA;CACC,yBAAyB;AAC1B;;AAEA;CACC,yBAAyB;AAC1B;AACA;CACC,iBAAiB;AAClB;AACA;CACC,iBAAiB;CACjB,yBAAyB;CACzB,SAAS;AACV;;AAEA;CACC,yDAAqD;CACrD,4BAA4B;CAC5B,kCAAkC;CAClC,aAAa;AACd;;AAEA;CACC,YAAY;CACZ,uBAAuB;AACxB;;AAEA;CACC,YAAY;CACZ,WAAW;AACZ","sourcesContent":["#top-footer {\r\n\tbackground-color: #2d485f;\r\n}\r\n\r\n#bottom-footer {\r\n\tbackground-color: #193046;\r\n}\r\n.smallest-footer-text {\r\n\tfont-size: 0.8rem;\r\n}\r\n.medium-footer-text {\r\n\tfont-size: 1.1rem;\r\n\tbackground-color: #2d485f;\r\n\tmargin: 0;\r\n}\r\n\r\n#bg-image {\r\n\tbackground-image: url(../icon/logo_usitop_footer.svg);\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n\tpadding: 2rem;\r\n}\r\n\r\n#background-logo-footer {\r\n\topacity: 15%;\r\n\tjustify-content: center;\r\n}\r\n\r\n.icon-13 {\r\n\theight: 13px;\r\n\twidth: 13px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -217,6 +212,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#hero-message {
 	background-color: #2d485f40;
+    position: relative;
 }
 
 #text-color {
@@ -226,7 +222,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#hero-message {
 .text-right {
 	text-align: right;
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/hero-message.css"],"names":[],"mappings":"AAAA;CACC,2BAA2B;AAC5B;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,iBAAiB;AAClB","sourcesContent":["#hero-message {\r\n\tbackground-color: #2d485f40;\r\n}\r\n\r\n#text-color {\r\n\tcolor: #193046;\r\n}\r\n\r\n.text-right {\r\n\ttext-align: right;\r\n}\r\n"],"sourceRoot":""}]);
+
+#btn-message{
+    background-color: #193046;
+    color: #fff;
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/hero-message.css"],"names":[],"mappings":"AAAA;CACC,2BAA2B;IACxB,kBAAkB;AACtB;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,iBAAiB;AAClB;;AAEA;IACI,yBAAyB;IACzB,WAAW;AACf","sourcesContent":["#hero-message {\r\n\tbackground-color: #2d485f40;\r\n    position: relative;\r\n}\r\n\r\n#text-color {\r\n\tcolor: #193046;\r\n}\r\n\r\n.text-right {\r\n\ttext-align: right;\r\n}\r\n\r\n#btn-message{\r\n    background-color: #193046;\r\n    color: #fff;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -313,12 +313,13 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `#produtos-btn-contato {
 	background-color: #193046;
 	font-size: 24px;
+	max-height: 75px;
 }
 
 .card.produtos {
+	min-height: 150px;;
 	max-height: 370px;
-	height: 370px;
-	background: #2d485f;
+	height: 50vh;
 	align-items: center;
 	justify-content: center;
 	display: flex;
@@ -330,7 +331,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#produtos-btn-contato {
 	font-weight: 600;
 	letter-spacing: 0.2rem;
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/produtos.css"],"names":[],"mappings":"AAAA;CACC,yBAAyB;CACzB,eAAe;AAChB;;AAEA;CACC,iBAAiB;CACjB,aAAa;CACb,mBAAmB;CACnB,mBAAmB;CACnB,uBAAuB;CACvB,aAAa;AACd;;AAEA;CACC,2BAA2B;CAC3B,eAAe;CACf,gBAAgB;CAChB,sBAAsB;AACvB","sourcesContent":["#produtos-btn-contato {\r\n\tbackground-color: #193046;\r\n\tfont-size: 24px;\r\n}\r\n\r\n.card.produtos {\r\n\tmax-height: 370px;\r\n\theight: 370px;\r\n\tbackground: #2d485f;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tdisplay: flex;\r\n}\r\n\r\n.card-title.produtos {\r\n\tfont-family: League Spartan;\r\n\tfont-size: 48px;\r\n\tfont-weight: 600;\r\n\tletter-spacing: 0.2rem;\r\n}\r\n"],"sourceRoot":""}]);
+
+.card-content {
+	text-align: center;
+}
+
+.card.bold {
+	background-color: #193046;
+}
+
+.card.light {
+	background-color: #2d485f;
+}
+
+.readMore {
+	justify-self: flex-end;
+	color: #fff;
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/produtos.css"],"names":[],"mappings":"AAAA;CACC,yBAAyB;CACzB,eAAe;CACf,gBAAgB;AACjB;;AAEA;CACC,iBAAiB;CACjB,iBAAiB;CACjB,YAAY;CACZ,mBAAmB;CACnB,uBAAuB;CACvB,aAAa;AACd;;AAEA;CACC,2BAA2B;CAC3B,eAAe;CACf,gBAAgB;CAChB,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,yBAAyB;AAC1B;;AAEA;CACC,yBAAyB;AAC1B;;AAEA;CACC,sBAAsB;CACtB,WAAW;AACZ","sourcesContent":["#produtos-btn-contato {\r\n\tbackground-color: #193046;\r\n\tfont-size: 24px;\r\n\tmax-height: 75px;\r\n}\r\n\r\n.card.produtos {\r\n\tmin-height: 150px;;\r\n\tmax-height: 370px;\r\n\theight: 50vh;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tdisplay: flex;\r\n}\r\n\r\n.card-title.produtos {\r\n\tfont-family: League Spartan;\r\n\tfont-size: 48px;\r\n\tfont-weight: 600;\r\n\tletter-spacing: 0.2rem;\r\n}\r\n\r\n.card-content {\r\n\ttext-align: center;\r\n}\r\n\r\n.card.bold {\r\n\tbackground-color: #193046;\r\n}\r\n\r\n.card.light {\r\n\tbackground-color: #2d485f;\r\n}\r\n\r\n.readMore {\r\n\tjustify-self: flex-end;\r\n\tcolor: #fff;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -352,28 +369,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../public/assets/img/logo_background_25.png */ "./public/assets/img/logo_background_25.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `#sobre-usitop-image {
-	width: auto;
-	height: 100%;
-	position: absolute;
-	opacity: 25%;
+___CSS_LOADER_EXPORT___.push([module.id, `#sobre-container {
+	background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100vh;
+	justify-content: center;
+	align-items: center;
 }
 
 #sobre-btn-contato {
 	background-color: #193046;
 	font-size: 24px;
+	max-height: 75px;
 }
 
 #sobre-icon {
 	max-width: 100px;
 	max-height: 100px;
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/sobre.css"],"names":[],"mappings":"AAAA;CACC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,YAAY;AACb;;AAEA;CACC,yBAAyB;CACzB,eAAe;AAChB;;AAEA;CACC,gBAAgB;CAChB,iBAAiB;AAClB","sourcesContent":["#sobre-usitop-image {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tposition: absolute;\r\n\topacity: 25%;\r\n}\r\n\r\n#sobre-btn-contato {\r\n\tbackground-color: #193046;\r\n\tfont-size: 24px;\r\n}\r\n\r\n#sobre-icon {\r\n\tmax-width: 100px;\r\n\tmax-height: 100px;\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./frontend/assets/css/sobre.css"],"names":[],"mappings":"AAAA;CACC,yDAA0E;CAC1E,2BAA2B;CAC3B,4BAA4B;CAC5B,sBAAsB;CACtB,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,yBAAyB;CACzB,eAAe;CACf,gBAAgB;AACjB;;AAEA;CACC,gBAAgB;CAChB,iBAAiB;AAClB","sourcesContent":["#sobre-container {\r\n\tbackground-image: url('../../../public/assets/img/logo_background_25.png');\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 100vh;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n#sobre-btn-contato {\r\n\tbackground-color: #193046;\r\n\tfont-size: 24px;\r\n\tmax-height: 75px;\r\n}\r\n\r\n#sobre-icon {\r\n\tmax-width: 100px;\r\n\tmax-height: 100px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2029,6 +2054,17 @@ module.exports = styleTagTransform;
 
 "use strict";
 module.exports = __webpack_require__.p + "84b9f4efebfbea77aecd.svg";
+
+/***/ }),
+
+/***/ "./public/assets/img/logo_background_25.png":
+/*!**************************************************!*\
+  !*** ./public/assets/img/logo_background_25.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "fe5eaaa09d42b8c7a26d.png";
 
 /***/ }),
 
@@ -24177,7 +24213,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-if (window.location.href === 'http://localhost:3000/produtos.html') {
+if (window.location.href === 'http://localhost:3000/produtos') {
   var section = document.querySelector('#productsInformationsSection');
   var buttons = section.querySelectorAll('button.readMore');
   buttons.forEach(function (el) {
