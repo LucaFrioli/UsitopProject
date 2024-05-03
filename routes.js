@@ -11,15 +11,15 @@ const homeController = require(
 
 const contatoController = require(
 	path.resolve(__dirname, 'src', 'controllers', 'contatoController.js')
-)
+);
 
 const produtosController = require(
 	path.resolve(__dirname, 'src', 'controllers', 'produtosController.js')
-)
+);
 
 const sobreController = require(
 	path.resolve(__dirname, 'src', 'controllers', 'sobreController.js')
-)
+);
 
 // rotas
 // definição das rotas, sempre colocar um comentário indicando a qual página as rotas da seção pertencem ex :  pertence
@@ -36,7 +36,6 @@ routes.get('/produtos', produtosController.getProdutos);
 
 // rotas da página sobre.ejs
 routes.get('/sobre', sobreController.getSobre);
-
 
 // rotass referentes a página (...)
 // definir rotas de (...)

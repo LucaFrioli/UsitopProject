@@ -15,36 +15,50 @@
 	</div>
 	<div class="row mt-5 pt-5 justify-content-center">
 		<div class="col-lg-5 text-center">
-			<form method="post" action="/contato" class="form-group">
+			<form
+				method="post"
+				action="/contato"
+				class="form-group contactForm"
+			>
+				<label for="nome" style="visibility: hidden">Nome</label>
 				<input
 					type="text"
-					class="form-control"
+					class="form-control validation"
 					id="nome"
 					name="nome"
 					placeholder="Nome"
 				/>
 				<div class="row my-2">
 					<div class="col">
+						<label for="email" style="visibility: hidden">
+							Email
+						</label>
 						<input
 							type="email"
-							class="form-control"
+							class="form-control validation"
 							id="email"
 							name="email"
 							placeholder="nome@examplo.com"
 						/>
 					</div>
 					<div class="col">
+						<label for="telefone" style="visibility: hidden">
+							Número de contato
+						</label>
 						<input
 							type="text"
-							class="form-control"
+							class="form-control validation"
 							id="telefone"
 							name="telefone"
 							placeholder="Número de contato"
 						/>
 					</div>
 				</div>
+				<label for="message" style="visibility: hidden">
+					Menssagem
+				</label>
 				<textarea
-					class="form-control"
+					class="form-control validation"
 					id="message"
 					name="message"
 					placeholder="Insira aqui sua mensagem ..."
@@ -54,6 +68,7 @@
 					type="submit"
 					class="btn mt-2 btn-success"
 					style="width: 100%"
+					id="enviarFormContato"
 				>
 					Enviar
 				</button>

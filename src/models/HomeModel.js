@@ -14,7 +14,9 @@ const homeModel = mongoose.model('ClientMessages', homeSchema);
 class HomeModel {
 	constructor(clientName, clientCellphone, clientEmail, clientMessage) {
 		this.clientName = clientName;
-		this.clientCellphone = HomeModel.isValidPhoneNumber(clientCellphone) ? clientCellphone : false;
+		this.clientCellphone = HomeModel.isValidPhoneNumber(clientCellphone)
+			? clientCellphone
+			: false;
 		this.clientEmail = HomeModel.isEmail(clientEmail) ? clientEmail : false;
 		this.clientMessage = clientMessage;
 	}
