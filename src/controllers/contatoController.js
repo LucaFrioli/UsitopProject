@@ -7,8 +7,11 @@ exports.getContato = (req, res) => {
 };
 
 exports.postContato = (req, res) => {
-	const { nome, telefone, email, message } = req.body;
+	let { nome, telefone, email, message } = req.body;
 	console.log(req.body);
+	if (!HomeModel.isValidPhoneNumber(telefone)) {
+		telefone = '+55' + telefone.replace(' ', '');
+	}
 	try {
 		new HomeModel(nome, telefone, email, message).create();
 	} catch (e) {

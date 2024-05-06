@@ -15,10 +15,10 @@ exports.handleFormSubmit = function (event) {
   event.preventDefault(); // Evita o envio padrão do formulário
 
   var isValid = validateForm(form); // Valida o formulário
-
+  console.log(isValid);
   if (isValid) {
-    console.log('Formulário enviado com sucesso!'); // Feedback positivo
     form.submit(); // Envia o formulário após validação bem-sucedida
+    console.log('Formulário enviado com sucesso!'); // Feedback positivo
   } else {
     alert('Erros encontrados no formulário. Por favor, corrija-os e tente novamente.'); // Feedback negativo
   }
@@ -26,6 +26,7 @@ exports.handleFormSubmit = function (event) {
 
 // Função para validar formulário
 var validateForm = function validateForm(form) {
+  var flag = true;
   // Remove erros anteriores
   clearErrors(form);
 
@@ -33,24 +34,24 @@ var validateForm = function validateForm(form) {
   var fields = Array.from(form.querySelectorAll('.validation'));
 
   // Valida cada campo
-  return fields.every(function (field) {
+  fields.forEach(function (field) {
     if (!field.value) {
       var label = field.previousElementSibling.textContent;
       createError(field, "".concat(label, " n\xE3o pode estar em branco"));
-      return false;
+      flag = false;
     }
     if (field.id === 'telefone' && !validateCelphone(field.value)) {
       console.log('erro de validação de telefone');
-      createError(field, 'Telefone inválido');
-      return false;
+      createError(field, 'Telefone inválido obs: não precisa do +55');
+      flag = false;
     }
     if (field.id === 'email' && !validateEmail(field.value)) {
       console.log('Erro de validação de email');
       createError(field, 'Email inválido');
-      return false;
+      flag = false;
     }
-    return true;
   });
+  return flag;
 };
 
 // Função para remover erros anteriores
@@ -68,8 +69,9 @@ var validateEmail = function validateEmail(email) {
 
 // Função para validar telefone (celular brasileiro)
 var validateCelphone = function validateCelphone(phone) {
+  var phoneWithoutSpace = phone.replace(' ', '');
   var regex = /^((1[1-9])|([2-9][0-9]))((3[0-9]{3}[0-9]{4})|(9[0-9]{3}[0-9]{5}))$/;
-  return regex.test(phone);
+  return regex.test(phoneWithoutSpace);
 };
 
 // Função para criar mensagem de erro
