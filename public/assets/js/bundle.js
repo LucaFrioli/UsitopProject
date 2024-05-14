@@ -116,14 +116,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 .montserrat-500 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
-	font-style: normal;
 }
 
 h1.montserrat {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/font_Controller.css"],"names":[],"mappings":"AAEA;CACC,iCAAiC;CACjC,gBAAgB;CAChB,kBAAkB;AACnB;;AAEA;;CAEC,qCAAqC;CACrC,gBAAgB;CAChB,kBAAkB;AACnB;;AAEA;CACC,qCAAqC;CACrC,gBAAgB;AACjB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap');\r\n\r\nbody {\r\n\tfont-family: 'Oxygen', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-style: normal;\r\n}\r\n\r\n.navbar,\r\n.montserrat-500 {\r\n\tfont-family: 'Montserrat', sans-serif;\r\n\tfont-weight: 500;\r\n\tfont-style: normal;\r\n}\r\n\r\nh1.montserrat {\r\n\tfont-family: 'Montserrat', sans-serif;\r\n\tfont-weight: 700;\r\n}\r\n"],"sourceRoot":""}]);
+
+.league-spartan{
+    font-family: 'League Spartan', sans-serif;
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/font_Controller.css"],"names":[],"mappings":"AAEA;CACC,iCAAiC;CACjC,gBAAgB;CAChB,kBAAkB;AACnB;;AAEA;;CAEC,qCAAqC;CACrC,gBAAgB;AACjB;;AAEA;CACC,qCAAqC;CACrC,gBAAgB;AACjB;;AAEA;IACI,yCAAyC;AAC7C","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap');\r\n\r\nbody {\r\n\tfont-family: 'Oxygen', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-style: normal;\r\n}\r\n\r\n.navbar,\r\n.montserrat-500 {\r\n\tfont-family: 'Montserrat', sans-serif;\r\n\tfont-weight: 500;\r\n}\r\n\r\nh1.montserrat {\r\n\tfont-family: 'Montserrat', sans-serif;\r\n\tfont-weight: 700;\r\n}\r\n\r\n.league-spartan{\r\n    font-family: 'League Spartan', sans-serif;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -217,6 +219,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#hero-message {
 	background-color: #2d485f40;
+    position: relative;
 }
 
 #text-color {
@@ -226,7 +229,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#hero-message {
 .text-right {
 	text-align: right;
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/hero-message.css"],"names":[],"mappings":"AAAA;CACC,2BAA2B;AAC5B;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,iBAAiB;AAClB","sourcesContent":["#hero-message {\r\n\tbackground-color: #2d485f40;\r\n}\r\n\r\n#text-color {\r\n\tcolor: #193046;\r\n}\r\n\r\n.text-right {\r\n\ttext-align: right;\r\n}\r\n"],"sourceRoot":""}]);
+
+#btn-message{
+    background-color: #193046;
+    color: #fff;
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/hero-message.css"],"names":[],"mappings":"AAAA;CACC,2BAA2B;IACxB,kBAAkB;AACtB;;AAEA;CACC,cAAc;AACf;;AAEA;CACC,iBAAiB;AAClB;;AAEA;IACI,yBAAyB;IACzB,WAAW;AACf","sourcesContent":["#hero-message {\r\n\tbackground-color: #2d485f40;\r\n    position: relative;\r\n}\r\n\r\n#text-color {\r\n\tcolor: #193046;\r\n}\r\n\r\n.text-right {\r\n\ttext-align: right;\r\n}\r\n\r\n#btn-message{\r\n    background-color: #193046;\r\n    color: #fff;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2028,7 +2035,7 @@ module.exports = styleTagTransform;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "84b9f4efebfbea77aecd.svg";
+module.exports = __webpack_require__.p + "cb918abee5c5fd6c3b37.svg";
 
 /***/ }),
 
