@@ -36,3 +36,19 @@
 	justify-self: flex-end;
 	color: #fff;
 }
+
+.productsCallToAction {
+	padding: 0.4rem;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+@media (max-width: 760px) {
+	.productsCallToAction{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.5rem;
+		align-items: center;
+	}
+}
