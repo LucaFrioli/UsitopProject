@@ -20,16 +20,20 @@
 				action="/contato"
 				class="form-group contactForm"
 			>
-				<label for="nome" style="visibility: hidden">Nome</label>
-				<input
-					type="text"
-					class="form-control validation"
-					id="nome"
-					name="nome"
-					placeholder="Nome"
-				/>
-				<div class="row my-2">
-					<div class="col">
+				<div class="row">
+					<div class="col-12">
+						<label for="nome" style="visibility: hidden"
+							>Nome</label
+						>
+						<input
+							type="text"
+							class="form-control validation"
+							id="nome"
+							name="nome"
+							placeholder="Nome"
+						/>
+					</div>
+					<div class="col-12 col-lg-6">
 						<label for="email" style="visibility: hidden">
 							Email
 						</label>
@@ -38,10 +42,10 @@
 							class="form-control validation"
 							id="email"
 							name="email"
-							placeholder="nome@examplo.com"
+							placeholder="nome@exemplo.com"
 						/>
 					</div>
-					<div class="col">
+					<div class="col-12 col-lg-6">
 						<label for="telefone" style="visibility: hidden">
 							Número de contato
 						</label>
@@ -53,20 +57,22 @@
 							placeholder="Número de contato"
 						/>
 					</div>
+					<div class="col-12">
+						<label for="message" style="visibility: hidden">
+							Mensagem
+						</label>
+						<textarea
+							class="form-control validation col-12"
+							id="message"
+							name="message"
+							placeholder="Insira aqui sua mensagem ..."
+							style="height: 150px"
+						></textarea>
+					</div>
 				</div>
-				<label for="message" style="visibility: hidden">
-					Menssagem
-				</label>
-				<textarea
-					class="form-control validation"
-					id="message"
-					name="message"
-					placeholder="Insira aqui sua mensagem ..."
-					style="height: 150px"
-				></textarea>
 				<button
 					type="submit"
-					class="btn mt-2 btn-success"
+					class="btn mt-3 btn-success"
 					style="width: 100%"
 					id="enviarFormContato"
 				>
