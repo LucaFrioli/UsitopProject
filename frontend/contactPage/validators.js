@@ -1,6 +1,9 @@
 // Obter formulário
 const form = document.querySelector('form.contactForm');
 
+// Obter Alert
+const alert = document.querySelector('#alert-contato');
+
 // Função para lidar com o submit do formulário
 exports.handleFormSubmit = (event) => {
 	event.preventDefault(); // Evita o envio padrão do formulário
@@ -9,12 +12,16 @@ exports.handleFormSubmit = (event) => {
 	console.log(isValid);
 
 	if (isValid) {
+		// Feedback positivo
+		alert('Formulário enviado com sucesso!');
+
 		form.submit(); // Envia o formulário após validação bem-sucedida
-		console.log('Formulário enviado com sucesso!'); // Feedback positivo
 	} else {
-		alert(
-			'Erros encontrados no formulário. Por favor, corrija-os e tente novamente.'
-		); // Feedback negativo
+		// Feedback negativo
+		alert.innerHTML =
+			'Erros encontrados no formulário. Por favor, corrija-os e tente novamente.';
+		alert.style.display = 'block';
+		alert.className = 'alert alert-danger rounded-0 text-center';
 	}
 };
 
