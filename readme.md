@@ -2,10 +2,13 @@
 
 **Obs: pesquisar minificador ou plugin para css, pesquisar e calcular usos de mongodb ou mysql/mariadb, financeiramente e ou tecnicamente, considerando curva de aprendizado e deadline do projeto.**
 
+**Adicione a pasta `js` dentro de `public/assets`**
+
 Adição de arquivo de configuração do projeto, requisitos para funcionar :
-- Extensão ESlint da microsoft;
-- Extensão Prettier - Code formatter da Prettier;
-- EditorConfig for VS Code da EditorConfig;
+
+-   Extensão ESlint da microsoft;
+-   Extensão Prettier - Code formatter da Prettier;
+-   EditorConfig for VS Code da EditorConfig;
 
 Estive documentando, e e qui está uma explicação básica para nos comunicarmos internamente, deveriamos pensar tambem em como organizar a documentação, por momento deixarei as documentações e contextos aplicaveis das ferramentas que estão sendo utilizadas como dependencias tanto do projeto quanto para desenvolvimento :
 
