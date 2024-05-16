@@ -1,10 +1,11 @@
-import 'core-js/stable'; //linha para otimização de código e inclusão de navegadores antigos
-import 'regenerator-runtime/runtime'; //linha para otimização de código e inclusão de navegadores antigos
+import 'core-js/stable'; // linha para otimização de código e inclusão de navegadores antigos
+import 'regenerator-runtime/runtime'; // linha para otimização de código e inclusão de navegadores antigos
 
 // chamada para arquivos js
 import { addingInfo } from './productsPage/readMore';
+import { handleFormSubmit } from './contactPage/validators';
 
-//chamadas para css
+// chamadas para css
 import './assets/css/card-carousel.css';
 import './assets/css/font_Controller.css';
 import './assets/css/hero2.css';
@@ -14,7 +15,7 @@ import './assets/css/hero-message.css';
 import './assets/css/sobre.css';
 import './assets/css/produtos.css';
 
-if (window.location.href === 'http://localhost:3000/produtos.html') {
+if (window.location.href === 'http://localhost:3000/produtos') {
 	const section = document.querySelector('#productsInformationsSection');
 	const buttons = section.querySelectorAll('button.readMore');
 	buttons.forEach((el) => {
@@ -23,3 +24,6 @@ if (window.location.href === 'http://localhost:3000/produtos.html') {
 		});
 	});
 }
+
+const contactForm = document.querySelector('form.contactForm');
+contactForm.addEventListener('submit', handleFormSubmit);

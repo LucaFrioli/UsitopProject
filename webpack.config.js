@@ -10,7 +10,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				//configurações referentes ao javascript
+				// configurações referentes ao javascript
 				exclude: /node_modules/,
 				test: /\.js$/,
 				use: {
@@ -21,7 +21,7 @@ module.exports = {
 				}
 			},
 			{
-				//configurações de minificação para css
+				// configurações de minificação para css
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader']
 			}

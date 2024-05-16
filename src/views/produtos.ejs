@@ -2,55 +2,71 @@
 
 <!-- CORPO -->
 <h1 class="my-5 py-5 text-center"><strong>Produtos</strong></h1>
-<section class="mt-5 pt-5" id="productsInformationsSection">
-    <div class="col">
-        <div class="row">
-            <div class="light-products-container" id="moldes">
-                <h1>Moldes</h1>
-                <button class="readMore">Leia Mais</button>
-                <div class="inject-content"></div>
+<section class=" container-fluid mt-5 pt-5" id="productsInformationsSection">
+		<div class="row">
+
+            <!-- CARD MOLDES -->
+            <div class="card produtos text-white rounded-0 m-0 bold col-lg-6" id="moldes">
+                <p class="card-title produtos" id="title-moldes">Moldes</p>
+                <p class="card-content w-75" style="display: none" id="text-moldes">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Minima laboriosam delectus aliquam, perferendis nulla
+					veritatis eaque dolores dolor odit reiciendis dicta fuga
+					assumenda enim inventore neque! Nihil architecto esse culpa!
+				</p>
+                <button class="btn btn-outline-light rounded-0 w-25 readMore" id="btn-moldes">Leia Mais</button>
             </div>
-            <div class="bold-products-container" id="matrizes">
-                <h1>Matrizes</h1>
-                <button class="readMore">Leia Mais</button>
-                <div class="inject-content"></div>
+
+            <!-- CARD MATRIZES -->
+			<div class="card produtos text-white rounded-0 m-0 light col-lg-6" id="matrizes">
+                <p class="card-title produtos" id="title-matrizes">Matrizes</p>
+                <p class="card-content w-75" style="display: none" id="text-matrizes">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Minima laboriosam delectus aliquam, perferendis nulla
+					veritatis eaque dolores dolor odit reiciendis dicta fuga
+					assumenda enim inventore neque! Nihil architecto esse culpa!
+				</p>
+                <button class="btn btn-outline-light rounded-0 w-25 readMore" id="btn-matrizes">Leia Mais</button>
             </div>
-        </div>
-        <div class="row">
-            <div class="bold-products-container" id="eletroErosao">
-                <h1>Eletro Erosão</h1>
-                <button class="readMore">Leia Mais</button>
-                <div class="inject-content"></div>
+
+		</div>
+		<div class="row">
+
+            <!-- CARD ELETRO EROSÃO -->
+			<div class="card produtos text-white rounded-0 m-0 light col-lg-6" id="eletro-erosao">
+                <p class="card-title produtos" id="title-eletro-erosao">Eletro Erosão</p>
+                <p class="card-content w-75" style="display: none" id="text-eletro-erosao">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Minima laboriosam delectus aliquam, perferendis nulla
+					veritatis eaque dolores dolor odit reiciendis dicta fuga
+					assumenda enim inventore neque! Nihil architecto esse culpa!
+				</p>
+                <button class="btn btn-outline-light rounded-0 w-25 readMore" id="btn-eletro-erosao">Leia Mais</button>
             </div>
-            <div class="light-products-container" id="usinagens">
-                <h1>Usinagens</h1>
-                <button class="readMore">Leia Mais</button>
-                <div class="inject-content"></div>
+
+            <!-- CARD USINAGENS -->
+			<div class="card produtos text-white rounded-0 m-0 bold col-lg-6" id="usinagens">
+                <p class="card-title produtos" id="title-usinagens">Usinagens</p>
+                <p class="card-content w-75" style="display: none" id="text-usinagens">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Minima laboriosam delectus aliquam, perferendis nulla
+					veritatis eaque dolores dolor odit reiciendis dicta fuga
+					assumenda enim inventore neque! Nihil architecto esse culpa!
+				</p>
+                <button class="btn btn-outline-light rounded-0 w-25 readMore" id="btn-usinagens">Leia Mais</button>
             </div>
-        </div>
-    </div>
+		</div>
 </section>
 
-<!-- <div class="container-fluid">
-<div class="row">
-<div class="card produtos text-white" id="card-moldes">
-<p class="card-title produtos">Moldes</p>
-<a href="#" class="btn btn-outline-light">Leia Mais</a>
-</div>
-</div>
-</div> -->
-
 <!-- Fale Conosco -->
-<div class="row pt-5 mt-5 justify-content-evenly">
-    <h3 class="col-lg-4">
-        Tem interesse? Entre em contato com a gente!
-    </h3>
-    <a
-        href="./contato.html"
-        class="btn text-white rounded col-lg-3 align-content-center"
-        id="produtos-btn-contato"
-        >Envie uma mensagem</a
-    >
+<div class="row py-5 my-5 justify-content-evenly">
+	<h3 class="col-lg-4">Tem interesse? Entre em contato com a gente!</h3>
+	<a
+		href="/contato"
+		class="btn text-white rounded col-lg-3 align-content-center"
+		id="produtos-btn-contato"
+		>Envie uma mensagem</a
+	>
 </div>
 
 <%- include('includes/footer') -%>

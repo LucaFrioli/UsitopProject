@@ -5,7 +5,7 @@ const phoneUtil = PhoneNumberUtil.getInstance();
 const homeSchema = new mongoose.Schema({
 	clientName: { type: String, required: true },
 	clientCellphone: { type: String, required: true },
-	clientEmail: { type: String, required: true, unique: true },
+	clientEmail: { type: String, required: true },
 	clientMessage: { type: String, required: true }
 });
 
@@ -14,19 +14,19 @@ const homeModel = mongoose.model('ClientMessages', homeSchema);
 class HomeModel {
 	constructor(clientName, clientCellphone, clientEmail, clientMessage) {
 		this.clientName = clientName;
-		this.clientCellphone = HomeModel.isValidPhoneNumber(clientCellphone) ? clientCellphone : false;
+		this.clientCellphone = HomeModel.isValidPhoneNumber(clientCellphone.trim())
+			? clientCellphone
+			: false;
 		this.clientEmail = HomeModel.isEmail(clientEmail) ? clientEmail : false;
 		this.clientMessage = clientMessage;
 	}
 
 	create() {
-
-
 		homeModel
 			.create({
-				name: this.clientName,
-				cellphone: this.clientCellphone,
-				email: this.clientEmail,
+				clientName: this.clientName,
+				clientCellphone: this.clientCellphone,
+				clientEmail: this.clientEmail,
 				clientMessage: this.clientMessage
 			})
 			.then((data) => {

@@ -1,12 +1,13 @@
 #produtos-btn-contato {
 	background-color: #193046;
 	font-size: 24px;
+	max-height: 75px;
 }
 
 .card.produtos {
+	min-height: 150px;
 	max-height: 370px;
-	height: 370px;
-	background: #2d485f;
+	height: 50vh;
 	align-items: center;
 	justify-content: center;
 	display: flex;
@@ -17,4 +18,21 @@
 	font-size: 48px;
 	font-weight: 600;
 	letter-spacing: 0.2rem;
+}
+
+.card-content {
+	text-align: center;
+}
+
+.card.bold {
+	background-color: #193046;
+}
+
+.card.light {
+	background-color: #2d485f;
+}
+
+.readMore {
+	justify-self: flex-end;
+	color: #fff;
 }

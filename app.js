@@ -13,7 +13,7 @@ const { demo, csrfCheckErr, csrfMidd } = require(
 );
 const app = express();
 const port = process.env.PORT || 3000;
-const daySessionsEnable = 7;
+const daySessionsEnable = 2;
 
 if (process.env.PRODUCTION === 'y') {
 	const helmet = require('helmet');
