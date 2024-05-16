@@ -4,13 +4,15 @@
 	max-height: 75px;
 }
 
-.card.produtos {
-	min-height: 150px;
-	max-height: 370px;
-	height: 50vh;
+.content-container-products-info{
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	display: flex;
+	min-height: 150px;
+	max-height: 425px;
+	height: 50vh;
+	padding: 0.5rem;
 }
 
 .card-title.produtos {
@@ -24,11 +26,11 @@
 	text-align: center;
 }
 
-.card.bold {
+.card-bold {
 	background-color: #193046;
 }
 
-.card.light {
+.card-light {
 	background-color: #2d485f;
 }
 

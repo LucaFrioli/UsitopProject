@@ -24,7 +24,7 @@ exports.addingInfo = (el) => {
 
 	} else { // Exibição do conteúdo do card
 		// Organização do Card
-		title.classList.add("mt-5")
+		title.classList.add("mt-4")
 		text.style.display = 'block';
 		card.style.justifyContent = "space-between";
 
