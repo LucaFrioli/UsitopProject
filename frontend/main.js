@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime'; // linha para otimização de código e in
 
 // chamada para arquivos js
 import { addingInfo } from './productsPage/readMore';
+import { sentinelScreenSize } from './productsPage/responsivenessControl';
 import { handleFormSubmit } from './contactPage/validators';
 
 // chamadas para css
@@ -16,6 +17,10 @@ import './assets/css/sobre.css';
 import './assets/css/produtos.css';
 
 if (window.location.href === 'http://localhost:3000/produtos') {
+	// função para ficar de sentinela em relação ao tamnaho da tela, ela averigurá o tamnho, e em determinada condição trocará a lista de clsses dos cards de apresentação de produto da página
+	sentinelScreenSize();
+
+	// controla a vizualização das informações de cada card
 	const section = document.querySelector('#productsInformationsSection');
 	const buttons = section.querySelectorAll('button.readMore');
 	buttons.forEach((el) => {
