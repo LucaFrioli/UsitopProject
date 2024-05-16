@@ -2,9 +2,19 @@
 	background-image: url('../../../public/assets/img/logo_background_25.png');
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 100vh;
 	justify-content: center;
 	align-items: center;
+	background-size: 100vh;
+}
+
+@media only screen and (max-device-width: 900px) {
+	#sobre-container {
+		background-size: 75vh;
+	}
+
+	#sobre-icon {
+		display: none;
+	}
 }
 
 #sobre-btn-contato {
