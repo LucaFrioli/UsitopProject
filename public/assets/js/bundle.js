@@ -114,7 +114,7 @@ exports.addingInfo = function (el) {
   } else {
     // Exibição do conteúdo do card
     // Organização do Card
-    title.classList.add("mt-5");
+    title.classList.add("mt-4");
     text.style.display = 'block';
     card.style.justifyContent = "space-between";
 
@@ -400,13 +400,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#produtos-btn-contato {
 	max-height: 75px;
 }
 
-.card.produtos {
-	min-height: 150px;
-	max-height: 370px;
-	height: 50vh;
+.content-container-products-info{
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	display: flex;
+	min-height: 150px;
+	max-height: 425px;
+	height: 50vh;
+	padding: 0.5rem;
 }
 
 .card-title.produtos {
@@ -420,11 +422,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#produtos-btn-contato {
 	text-align: center;
 }
 
-.card.bold {
+.card-bold {
 	background-color: #193046;
 }
 
-.card.light {
+.card-light {
 	background-color: #2d485f;
 }
 
@@ -448,7 +450,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#produtos-btn-contato {
 		align-items: center;
 	}
 }
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/produtos.css"],"names":[],"mappings":"AAAA;CACC,yBAAyB;CACzB,eAAe;CACf,gBAAgB;AACjB;;AAEA;CACC,iBAAiB;CACjB,iBAAiB;CACjB,YAAY;CACZ,mBAAmB;CACnB,uBAAuB;CACvB,aAAa;AACd;;AAEA;CACC,2BAA2B;CAC3B,eAAe;CACf,gBAAgB;CAChB,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,yBAAyB;AAC1B;;AAEA;CACC,yBAAyB;AAC1B;;AAEA;CACC,sBAAsB;CACtB,WAAW;AACZ;;AAEA;CACC,eAAe;CACf,aAAa;CACb,6BAA6B;AAC9B;;AAEA;CACC;EACC,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,WAAW;EACX,mBAAmB;CACpB;AACD","sourcesContent":["#produtos-btn-contato {\n\tbackground-color: #193046;\n\tfont-size: 24px;\n\tmax-height: 75px;\n}\n\n.card.produtos {\n\tmin-height: 150px;\n\tmax-height: 370px;\n\theight: 50vh;\n\talign-items: center;\n\tjustify-content: center;\n\tdisplay: flex;\n}\n\n.card-title.produtos {\n\tfont-family: League Spartan;\n\tfont-size: 48px;\n\tfont-weight: 600;\n\tletter-spacing: 0.2rem;\n}\n\n.card-content {\n\ttext-align: center;\n}\n\n.card.bold {\n\tbackground-color: #193046;\n}\n\n.card.light {\n\tbackground-color: #2d485f;\n}\n\n.readMore {\n\tjustify-self: flex-end;\n\tcolor: #fff;\n}\n\n.productsCallToAction {\n\tpadding: 0.4rem;\n\tdisplay: flex;\n\tjustify-content: space-evenly;\n}\n\n@media (max-width: 760px) {\n\t.productsCallToAction{\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tjustify-content: center;\n\t\tgap: 0.5rem;\n\t\talign-items: center;\n\t}\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./frontend/assets/css/produtos.css"],"names":[],"mappings":"AAAA;CACC,yBAAyB;CACzB,eAAe;CACf,gBAAgB;AACjB;;AAEA;CACC,aAAa;CACb,sBAAsB;CACtB,mBAAmB;CACnB,uBAAuB;CACvB,iBAAiB;CACjB,iBAAiB;CACjB,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,2BAA2B;CAC3B,eAAe;CACf,gBAAgB;CAChB,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC,yBAAyB;AAC1B;;AAEA;CACC,yBAAyB;AAC1B;;AAEA;CACC,sBAAsB;CACtB,WAAW;AACZ;;AAEA;CACC,eAAe;CACf,aAAa;CACb,6BAA6B;AAC9B;;AAEA;CACC;EACC,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,WAAW;EACX,mBAAmB;CACpB;AACD","sourcesContent":["#produtos-btn-contato {\n\tbackground-color: #193046;\n\tfont-size: 24px;\n\tmax-height: 75px;\n}\n\n.content-container-products-info{\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n\tmin-height: 150px;\n\tmax-height: 425px;\n\theight: 50vh;\n\tpadding: 0.5rem;\n}\n\n.card-title.produtos {\n\tfont-family: League Spartan;\n\tfont-size: 48px;\n\tfont-weight: 600;\n\tletter-spacing: 0.2rem;\n}\n\n.card-content {\n\ttext-align: center;\n}\n\n.card-bold {\n\tbackground-color: #193046;\n}\n\n.card-light {\n\tbackground-color: #2d485f;\n}\n\n.readMore {\n\tjustify-self: flex-end;\n\tcolor: #fff;\n}\n\n.productsCallToAction {\n\tpadding: 0.4rem;\n\tdisplay: flex;\n\tjustify-content: space-evenly;\n}\n\n@media (max-width: 760px) {\n\t.productsCallToAction{\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tjustify-content: center;\n\t\tgap: 0.5rem;\n\t\talign-items: center;\n\t}\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
