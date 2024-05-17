@@ -15,19 +15,19 @@
 			</p>
 		</div>
 	</div>
+
 	<hr class="col-md-6 offset-md-3" />
+
 	<div class="row mt-3 justify-content-center">
-		<div class="col-lg-5 text-center">
+		<div class="col-xl-6 col-md-8 col-sm-10">
 			<form
 				method="post"
 				action="/contato"
 				class="form-group contactForm"
 			>
-				<div class="row">
-					<div class="col-12">
-						<label for="nome" style="visibility: hidden"
-							>Nome</label
-						>
+				<div class="row justify-content-center">
+					<div class="col-12 mb-3">
+						<label class="form-label" for="nome">Nome:</label>
 						<input
 							type="text"
 							class="form-control validation"
@@ -36,10 +36,8 @@
 							placeholder="Nome"
 						/>
 					</div>
-					<div class="col-12 col-lg-6">
-						<label for="email" style="visibility: hidden">
-							Email
-						</label>
+					<div class="col-12 col-lg-6 col-md-7 mb-3">
+						<label class="form-label" for="email">Email:</label>
 						<input
 							type="email"
 							class="form-control validation"
@@ -48,22 +46,22 @@
 							placeholder="nome@exemplo.com"
 						/>
 					</div>
-					<div class="col-12 col-lg-6">
-						<label for="telefone" style="visibility: hidden">
-							Número de contato
-						</label>
+					<div class="col-12 col-lg-6 col-md-5 mb-3">
+						<label class="form-label" for="telefone"
+							>Número de contato:</label
+						>
 						<input
 							type="text"
 							class="form-control validation"
 							id="telefone"
 							name="telefone"
-							placeholder="Número de contato"
+							placeholder="Telefone"
 						/>
 					</div>
 					<div class="col-12">
-						<label for="message" style="visibility: hidden">
-							Mensagem
-						</label>
+						<label class="form-label" for="message"
+							>Mensagem:</label
+						>
 						<textarea
 							class="form-control validation col-12"
 							id="message"
