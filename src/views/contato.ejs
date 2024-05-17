@@ -26,41 +26,53 @@
 				class="form-group contactForm"
 			>
 				<div class="row justify-content-center">
+					<!-- NOME -->
 					<div class="col-12 mb-3">
-						<label class="form-label" for="nome">Nome:</label>
+						<label class="form-label" for="nome"
+							><strong>Nome:</strong></label
+						>
 						<input
 							type="text"
 							class="form-control validation"
 							id="nome"
 							name="nome"
-							placeholder="Nome"
+							placeholder="Seu nome"
 						/>
 					</div>
+
+					<!-- EMAIL -->
 					<div class="col-12 col-lg-6 col-md-7 mb-3">
-						<label class="form-label" for="email">Email:</label>
+						<label class="form-label" for="email"
+							><strong>Email:</strong></label
+						>
 						<input
 							type="email"
 							class="form-control validation"
 							id="email"
 							name="email"
-							placeholder="nome@exemplo.com"
+							placeholder="Nome@Exemplo.com"
 						/>
 					</div>
+
+					<!-- TELEFONE -->
 					<div class="col-12 col-lg-6 col-md-5 mb-3">
 						<label class="form-label" for="telefone"
-							>Número de contato:</label
+							><strong>Número de contato:</strong></label
 						>
 						<input
-							type="text"
+							type="tel"
+							maxlength="15"
 							class="form-control validation"
 							id="telefone"
 							name="telefone"
 							placeholder="Telefone"
 						/>
 					</div>
+
+					<!-- MENSAGEM -->
 					<div class="col-12">
 						<label class="form-label" for="message"
-							>Mensagem:</label
+							><strong>Mensagem:</strong></label
 						>
 						<textarea
 							class="form-control validation col-12"
