@@ -15,6 +15,7 @@ import './assets/css/footer.css';
 import './assets/css/hero-message.css';
 import './assets/css/sobre.css';
 import './assets/css/produtos.css';
+import { handleTelmask } from './contactPage/telMask';
 
 if (window.location.href === 'http://localhost:3000/produtos') {
 	// função para ficar de sentinela em relação ao tamnaho da tela, ela averigurá o tamnho, e em determinada condição trocará a lista de clsses dos cards de apresentação de produto da página
@@ -30,5 +31,14 @@ if (window.location.href === 'http://localhost:3000/produtos') {
 	});
 }
 
-const contactForm = document.querySelector('form.contactForm');
-contactForm.addEventListener('submit', handleFormSubmit);
+if (window.location.href === 'http://localhost:3000/contato') {
+	// EVENTO ATIVADA AO TOCAR EM "ENVIAR" NA PÁGINA "CONTATO"
+	const contactForm = document.querySelector('form.contactForm');
+	contactForm.addEventListener('submit', handleFormSubmit);
+
+	// EVENTO ACIONADO AO INSERIR CARACTERES NO INPUT "TELEFONE" PARA FORMATAÇÃO
+	const telInput = document.querySelector('input#telefone');
+	telInput.addEventListener('keypress', () => {
+		handleTelmask(telInput);
+	});
+}

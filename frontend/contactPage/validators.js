@@ -44,7 +44,7 @@ const validateForm = (form) => {
 
 		if (field.id === 'telefone' && !validateCelphone(field.value)) {
 			console.log('erro de validação de telefone');
-			createError(field, 'Telefone inválido obs: não precisa do +55');
+			createError(field, 'Telefone inválido *obs: não precisa do +55');
 			flag = false;
 		}
 
@@ -73,9 +73,10 @@ const validateEmail = (email) => {
 
 // Função para validar telefone (celular brasileiro)
 const validateCelphone = (phone) => {
+	if (phone.length < 14) return false;
 	const phoneWithoutSpace = phone.replace(' ', '');
 	const regex =
-		/^((1[1-9])|([2-9][0-9]))((3[0-9]{3}[0-9]{4})|(9[0-9]{3}[0-9]{5}))$/;
+		/^\(((1[1-9])|([2-9][0-9]))\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{4}-[0-9]{4}))$/;
 	return regex.test(phoneWithoutSpace);
 };
 
