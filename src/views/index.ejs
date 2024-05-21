@@ -92,7 +92,10 @@
 		</h1>
 		<div class="col-10 col-lg-6 mx-auto">
 			<p class="lead mb-4">
-				A Usitop Usinagem e Ferramentaria é uma empresa experiente que está no mercado para atender seus clientes de maneira satisfatória, viabilizando o custo-benefício com a máxima qualidade nos serviços prestados.
+				A Usitop Usinagem e Ferramentaria é uma empresa experiente que
+				está no mercado para atender seus clientes de maneira
+				satisfatória, viabilizando o custo-benefício com a máxima
+				qualidade nos serviços prestados.
 			</p>
 		</div>
 	</div>
@@ -142,179 +145,25 @@
 	<!-- CARD CAROUSEL -->
 	<h1 class="text-center montserrat-700">Nossas especialidades</h1>
 	<div class="container-fluid my-5">
-		<div
-			id="carouselExample"
-			class="carousel carousel-dark slide"
-			data-bs-ride="carousel"
-		>
-			<div class="carousel-inner">
-				<!-- SLIDE 1 -->
-				<div class="carousel-item active">
-					<div class="cards-wrapper">
-						<!-- CARD 1 -->
-						<div class="card mb-3 ms-5">
-							<div class="row g-0">
-								<div class="d-flex align-items-center">
-									<div class="col-md-4">
-										<img
-											src="./assets/img/molde-compressao.jpg"
-											class="img-fluid rounded-start"
-											alt="..."
-										/>
-									</div>
-									<div class="col-md-8 px-5">
-										<div class="card-body">
-											<h3 class="card-title fw-bolder">
-												Moldes de compressão
-											</h3>
-											<p class="card-text">
-												Desenvolvemos moldes de
-												excelente qualidade com atenção
-												máxima a cada uma das suas
-												etapas: desde o projeto 3D até a
-												confecção, com todos os ajustes
-												necessários para garantir a
-												excelência dos nossos serviços.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- CARD 2 -->
-						<div class="card mb-3 me-5">
-							<div class="row g-0">
-								<div class="d-flex align-items-center">
-									<div class="col-md-4">
-										<img
-											src="./assets/img/molde1_card1.jpg"
-											class="img-fluid rounded-start"
-											alt="..."
-										/>
-									</div>
-									<div class="col-md-8 px-5">
-										<div class="card-body">
-											<h3 class="card-title fw-bolder">
-												Matrizes de extrusão
-											</h3>
-											<p class="card-text">
-												Oferecemos uma ampla variedade
-												de matrizes de extrusão de
-												borracha personalizadas para
-												atender às suas necessidades.
-												Nossas matrizes são fabricadas
-												com os melhores materiais e usam
-												tecnologia de ponta para
-												garantir precisão dimensional
-												superior, acabamento impecável e
-												desempenho confiável.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!--SLIDE 2 -->
-				<div class="carousel-item">
-					<div class="cards-wrapper">
-						<!-- CARD 3 -->
-						<div class="card mb-3 ms-5">
-							<div class="row g-0">
-								<div class="d-flex align-items-center">
-									<div class="col-md-4">
-										<img
-											src="./assets/img/eletroerosao.jpeg"
-											class="img-fluid rounded-start"
-											alt="..."
-										/>
-									</div>
-									<div class="col-md-8 px-5">
-										<div class="card-body">
-											<h3 class="card-title fw-bolder">
-												Eletro-erosão
-											</h3>
-											<p class="card-text">
-												Corte de formas complexas, furos
-												de alta precisão, acabamentos
-												superficiais de alta qualidade e
-												pequenos lotes e protótipos são
-												alguns dos produtos que podemos
-												usinar. Nossa equipe experiente
-												e nossos equipamentos de última
-												geração garantem resultados da
-												mais alta qualidade.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- CARD 4 -->
-						<div class="card mb-3 me-5">
-							<div class="row g-0">
-								<div class="d-flex align-items-center">
-									<div class="col-md-4">
-										<img
-											src="./assets/img/usinagem-em-serie.jpeg"
-											class="img-fluid rounded-start"
-											alt="..."
-										/>
-									</div>
-									<div class="col-md-8 px-5">
-										<div class="card-body">
-											<h3 class="card-title fw-bolder">
-												Usinagem em série
-											</h3>
-											<p class="card-text">
-												Oferecemos uma ampla variedade
-												de serviços de usinagem,
-												incluindo: torneamento,
-												fresamento, furação, retificação
-												e tratamentos térmicos.
-												Utilizamos máquinas e
-												equipamentos modernos para
-												garantir a qualidade e a
-												precisão das peças. Entre em
-												contato conosco hoje mesmo para
-												saber mais sobre nossos serviços
-												de usinagem em série!
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button
-				class="carousel-control-prev"
-				type="button"
-				data-bs-target="#carouselExample"
-				data-bs-slide="prev"
-			>
-				<span
-					class="carousel-control-prev-icon"
-					aria-hidden="true"
-				></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button
-				class="carousel-control-next"
-				type="button"
-				data-bs-target="#carouselExample"
-				data-bs-slide="next"
-			>
-				<span
-					class="carousel-control-next-icon"
-					aria-hidden="true"
-				></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+		<div id="carousel50" style="display: none">
+			<%- include("includes/carousel50") %>
 		</div>
+		<div id="carousel100" style="display: none">
+			<%- include("includes/carousel100") %>
+		</div>
+
+		<!-- Client-side script to show the appropriate carousel -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				if (window.innerWidth > 768) {
+					document.getElementById('carousel50Y').style.display =
+						'block';
+				} else {
+					document.getElementById('carousel100').style.display =
+						'block';
+				}
+			});
+		</script>
 	</div>
 
 	<!-- HERO MENSAGEM -->
