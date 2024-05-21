@@ -30,5 +30,7 @@ if (window.location.href === 'http://localhost:3000/produtos') {
 	});
 }
 
-const contactForm = document.querySelector('form.contactForm');
-contactForm.addEventListener('submit', handleFormSubmit);
+if (window.location.href === 'http://localhost:3000/contato') {
+	const contactForm = document.querySelector('form.contactForm');
+	contactForm.addEventListener('submit', handleFormSubmit);
+}
