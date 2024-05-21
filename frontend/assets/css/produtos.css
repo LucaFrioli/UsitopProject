@@ -4,7 +4,7 @@
 	max-height: 75px;
 }
 
-.content-container-products-info{
+.content-container-products-info {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -13,6 +13,10 @@
 	max-height: 425px;
 	height: 50vh;
 	padding: 0.5rem;
+}
+
+text-card-products {
+	color: #061420;
 }
 
 .card-title.produtos {
@@ -45,8 +49,57 @@
 	justify-content: space-evenly;
 }
 
+#moldes {
+	background-color: #2d485f;
+	background-image: url(../../../public/assets/img/molde1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	background-size: 100vw;
+	border: solid #fff 1px;
+	filter: brightness(0.8) contrast(120%) saturate(120%) sepia(20%)
+		hue-rotate(180deg);
+}
+
+#matrizes {
+	background-color: #2d485f;
+	background-image: url(../../../public/assets/img/molde2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	background-size: 100vw;
+	border: solid #fff 1px;
+	filter: brightness(0.9) contrast(150%) saturate(70%) opacity(30%) sepia(5%);
+}
+
+#eletro-erosao {
+	background-color: #193046;
+	background-image: url(../../../public/assets/img/eletroerosao.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	background-size: 100vw;
+	filter: brightness(0.9) contrast(150%) saturate(70%) opacity(30%) sepia(5%);
+	border: solid #fff 1px;
+}
+
+#usinagens {
+	background-color: #2d485f;
+	background-image: url(../../../public/assets/img/furadeira.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	background-size: 100vw;
+	filter: brightness(0.9) contrast(150%) saturate(70%) opacity(30%) sepia(5%);
+	border: solid #fff 1px;
+}
+
 @media (max-width: 760px) {
-	.productsCallToAction{
+	.productsCallToAction {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
