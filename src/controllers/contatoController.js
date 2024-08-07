@@ -8,6 +8,7 @@ exports.getContato = (req, res) => {
 
 exports.postContato = (req, res) => {
 	let { nome, telefone, email, message } = req.body;
+	// Info para system log
 	console.log(req.body);
 	if (!HomeModel.isValidPhoneNumber(telefone)) {
 		telefone = '+55' + telefone.replace(' ', '');
