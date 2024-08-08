@@ -2,7 +2,7 @@ const { resolve } = require('node:path');
 const validator = require('validator');
 const { warnAndStoreErrors } = require(
 	// '../services/logInterface'
-	resolve(__dirname, '..', 'services', 'logInterface.js')
+	resolve(__dirname, '..', 'utils', 'logInterface.js')
 );
 
 
@@ -40,9 +40,12 @@ function fieldIsEmail(valueOfEmailKey, error) {
 	return;
 }
 
-// validação de fixo :
-// eslint-disable-next-line no-unused-vars
-function validPhone (phone) {
+/**
+ * validação de telefone fixo :
+ * @param {string} phone
+ * @returns {boolean}
+*/
+function validaTelefoneFixo (phone) {
     const regex = '^\\([0-9]{2}\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$';
 	const regexTell = '^\\([0-9]{2}\\)((3[0-9]{7})|(9[0-9]{8}))$'
     if(regex.test(phone) || regexTell.test(phone)){
@@ -65,9 +68,10 @@ function fieldIsPhoneNumber(valueOfPhoneNumberKey, error) {
 			);
 		}
 
-		if (!validator.isMobilePhone(valueOfPhoneNumberKey)){
-			error.push('Numero de telefone-celular é inválido');
+		if (!validator.isMobilePhone(valueOfPhoneNumberKey) || !validaTelefoneFixo(valueOfPhoneNumberKey)){
+			error.push('Numero de telefone é inválido');
 		}
+
 	} catch (e) {
 		warnAndStoreErrors(e);
 	}

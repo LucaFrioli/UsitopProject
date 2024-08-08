@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const versionsSchema = {
 	mainSchema: new mongoose.Schema({
 		clientName: { type: String, required: true },
-		clientCellphone: { type: String, required: true },
 		clientEmail: { type: String, required: true },
+		clientCellphone: { type: String, required: true },
 		clientMessage: { type: String, required: true }
 	})
 
