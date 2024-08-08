@@ -6,6 +6,10 @@ const validations = require('./validations');
 const homeModel = mongoose.model('ClientMessages', mainSchema);
 
 class messagesService {
+	/**
+	 * O construtor espera um corpo de requisição para ser utilizado
+	 * @param {Object} reqBody
+	*/
 	constructor(reqBody) {
 		this.model = homeModel;
 		this.body = reqBody;
