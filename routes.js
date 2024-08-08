@@ -21,6 +21,12 @@ const sobreController = require(
 	path.resolve(__dirname, 'src', 'controllers', 'sobreController.js')
 );
 
+// Middleware
+
+const contactMiddleware = require(
+	path.resolve(__dirname,'src','middlewares','contactMiddleware.js')
+)
+
 // rotas
 // definição das rotas, sempre colocar um comentário indicando a qual página as rotas da seção pertencem ex :  pertence
 
@@ -28,7 +34,7 @@ const sobreController = require(
 routes.get('/', homeController.getIndex);
 
 // rotas da página contato.ejs
-routes.get('/contato', contatoController.getContato);
+routes.get('/contato', contactMiddleware.infoMidd, contatoController.getContato);
 routes.post('/contato', contatoController.postContato);
 
 // rotas da página produtos.ejs
