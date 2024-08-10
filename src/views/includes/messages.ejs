@@ -1,13 +1,13 @@
-<div class="col">
+<div class="row justify-content-center align-items-center">
 	<% if(errors.length > 0 ){ %>
-		<div class="messagesFlash">
+		<div class="messagesFlash" style="background-color: #f38f8fbd; border-color: #ff0000; color: black;">
 			<% errors.forEach( error =>{ %>
 				<%= error %> <br>
 			<% }); %>
 		</div>
-		<% } %>
+	<% } %>
 
-		<% if(success.length > 0 ){ %>
+	<% if(success.length > 0 ){ %>
 			<div class="messagesFlash" style="background-color: #8ff3a8bd; border-color: #00ff40; color: black;">
 				<% success.forEach( success =>{ %>
 					<%= success %> <br>

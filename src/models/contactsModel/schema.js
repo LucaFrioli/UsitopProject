@@ -1,12 +1,6 @@
 const mongoose = require('mongoose');
 
 const versionsSchema = {
-	mainSchema: new mongoose.Schema({
-		clientName: { type: String, required: true },
-		clientEmail: { type: String, required: true },
-		clientCellphone: { type: String, required: true },
-		clientMessage: { type: String, required: true }
-	})
 
 	/**
 	 * To version use this :
@@ -20,6 +14,13 @@ const versionsSchema = {
 	 *
 	 * After defining the fields to add and remove, remember to update the schema in key **mainSchema** with de descripted modifications, to mantain the new registers in an intact format, be carfull using the versions, you have be know what you doing!!!!
 	 */
+
+	mainSchema: new mongoose.Schema({
+		clientName: { type: String, required: true },
+		clientEmail: { type: String, required: true },
+		clientCellphone: { type: String, required: true },
+		clientMessage: { type: String, required: true }
+	})
 };
 
 module.exports = versionsSchema;

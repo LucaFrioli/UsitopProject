@@ -27,10 +27,15 @@ exports.getContato = (req, res) => {
 
 exports.postContato = (req,res) =>{
 	const expectedKeys = ['clientName','clientEmail','clientCellphone','clientMessage','_csrf'];
+	const body = req.body;
 	try {
-		if(verifyBody(req.body, expectedKeys)){
-			const service = new MessageService(req.body);
-			if(service.error.length > 0){
+		if(verifyBody(body, expectedKeys)){
+			console.log(body, 'vindo do controller');
+			const service = new MessageService(body);
+
+			service.sanitizeAndValidateBody();
+
+			if(service.error.length !== 0){
 				req.flash ('errors', service.error);
 				req.session.save(()=>{
 					res.redirect('back');
@@ -40,7 +45,7 @@ exports.postContato = (req,res) =>{
 			service.createMessage();
 			req.flash(
 				'success',
-				'Sua menssagem foi enviada com Sucesso ! Desejaria enviar outra menssagem ?'
+				'Sua menssagem foi enviada com Sucesso ! Deseja enviar outra menssagem ?'
 			);
 			res.redirect('/contato');
 		}else{
