@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const versionsSchema = {
-
 	/**
 	 * To version use this :
 	 *

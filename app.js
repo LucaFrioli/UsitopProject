@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const csrf = require('csurf');
 
 const routes = require(path.resolve(__dirname, 'routes.js'));
-const { demo, csrfCheckErr, csrfMidd } = require(
+const { csrfCheckErr, csrfMidd } = require(
 	path.resolve(__dirname, 'src', 'middlewares', 'globalsMiddleware.js')
 );
 const app = express();
@@ -53,7 +53,6 @@ app.use(SessionConfig);
 app.use(csrf());
 app.use(csrfCheckErr);
 app.use(csrfMidd);
-app.use(demo);
 app.use(routes);
 
 app.set('views', path.resolve(__dirname, 'src', 'views'));

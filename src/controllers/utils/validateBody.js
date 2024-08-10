@@ -2,8 +2,8 @@
  * Função para validação de corpo de requisição e interação com banco de dados
  * @param {{}} [body] - body of the request
  * @param {string[]} [expectedKeys] - array whith the names of expected Keys in a body of the request
-*/
-function verifyBody (body, expectedKeys){
+ */
+function verifyBody(body, expectedKeys) {
 	const keys = Object.keys(body);
 	// eslint-disable-next-line prefer-const
 	for (let key of keys) {
@@ -18,4 +18,4 @@ function verifyBody (body, expectedKeys){
 	return true;
 }
 
-module.exports = {verifyBody}
+module.exports = { verifyBody };
