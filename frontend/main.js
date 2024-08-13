@@ -7,7 +7,7 @@ import './assets/css/footer.css';
 import './assets/css/hero-message.css';
 import './assets/css/sobre.css';
 import './assets/css/produtos.css';
-import { handleTelmask } from './contactPage/telMask';
+// import { handleTelmask } from './contactPage/telMask';
 
 import 'core-js/stable'; // linha para otimização de código e inclusão de navegadores antigos
 import 'regenerator-runtime/runtime'; // linha para otimização de código e inclusão de navegadores antigos
@@ -15,7 +15,7 @@ import 'regenerator-runtime/runtime'; // linha para otimização de código e in
 // chamada para arquivos js
 import { sentinelScreenSize } from './productsPage/responsivenessControl';
 import { addingInfo } from './productsPage/readMore';
-import { handleFormSubmit } from './contactPage/validators';
+import { formSubmit } from './contactPage/validators';
 
 if (window.location.href === 'http://localhost:3000/produtos') {
 	// função para ficar de sentinela em relação ao tamnaho da tela, ela averigurá o tamnho, e em determinada condição trocará a lista de clsses dos cards de apresentação de produto da página
@@ -34,11 +34,11 @@ if (window.location.href === 'http://localhost:3000/produtos') {
 if (window.location.href === 'http://localhost:3000/contato') {
 	// EVENTO ATIVADA AO TOCAR EM "ENVIAR" NA PÁGINA "CONTATO"
 	const contactForm = document.querySelector('form.contactForm');
-	contactForm.addEventListener('submit', handleFormSubmit);
+	contactForm.addEventListener('submit', formSubmit);
 
-	// EVENTO ACIONADO AO INSERIR CARACTERES NO INPUT "TELEFONE" PARA FORMATAÇÃO
-	const telInput = document.querySelector('input#telefone');
-	telInput.addEventListener('keypress', () => {
-		handleTelmask(telInput);
-	});
+	// // EVENTO ACIONADO AO INSERIR CARACTERES NO INPUT "TELEFONE" PARA FORMATAÇÃO
+	// const telInput = document.querySelector('input#telefone');
+	// telInput.addEventListener('keypress', () => {
+	// 	handleTelmask(telInput);
+	// });
 }
