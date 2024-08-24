@@ -1,6 +1,6 @@
 <div class="row justify-content-center align-items-center">
 	<% if(errors.length > 0 ){ %>
-		<div class="messagesFlash" style="background-color: #f38f8fbd; border-color: #ff0000; color: black;">
+		<div class="messagesFlash text-center col-12 col-md-8 col-lg-6" style="background-color: #f38f8fbd; border-color: #ff0000; color: black;">
 			<% errors.forEach( error =>{ %>
 				<%= error %> <br>
 			<% }); %>
@@ -8,7 +8,7 @@
 	<% } %>
 
 	<% if(success.length > 0 ){ %>
-			<div class="messagesFlash" style="background-color: #8ff3a8bd; border-color: #00ff40; color: black;">
+			<div class="messagesFlash text-center col-12 col-md-8 col-lg-6" style="background-color: #8ff3a8bd; border-color: #00ff40; color: black;">
 				<% success.forEach( success =>{ %>
 					<%= success %> <br>
 				<% }); %>

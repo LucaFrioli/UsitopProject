@@ -1,13 +1,16 @@
+// Realizar chamadas dos arquivos e dependencias deste arquivo;
 const { resolve } = require('node:path');
 const mongoose = require('mongoose');
 const { mainSchema } = require(resolve(__dirname, 'schema.js'));
 const validations = require('./validations');
 
+// criar modelo com base noschema definido no arquivo de referência
 const homeModel = mongoose.model('ClientMessages', mainSchema);
 
+// criar a classe de serviço que será utilizada para o "CRUD" das menssagens
 class messagesService {
 	/**
-	 * O construtor espera um corpo de requisição para ser utilizado
+	 * O construtor espera um corpo de requisição para ser utilizado nas transações do banco de dados
 	 * @param {Object} reqBody
 	 */
 	constructor(reqBody) {

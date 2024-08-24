@@ -8,23 +8,6 @@ exports.getContato = (req, res) => {
 	res.render(pageName, data);
 };
 
-// exports.postContato = (req, res) => {
-// 	let { nome, telefone, email, message } = req.body;
-// 	// Info para system log
-// 	console.log(req.body);
-// 	if (!HomeModel.isValidPhoneNumber(telefone)) {
-// 		telefone = '+55' + telefone.replace(' ', '');
-// 	}
-// 	try {
-// 		new HomeModel(nome, telefone, email, message).create();
-// 	} catch (e) {
-// 		console.log(e);
-// 	}
-// 	const dataPost = { ...data, ...req.body };
-// 	console.log(dataPost);
-// 	res.render(pageName, dataPost);
-// };
-
 exports.postContato = (req, res) => {
 	const expectedKeys = [
 		'clientName',
@@ -51,7 +34,7 @@ exports.postContato = (req, res) => {
 			service.createMessage();
 			req.flash(
 				'success',
-				'Sua menssagem foi enviada com Sucesso ! Deseja enviar outra menssagem ?'
+				'Sua mensagem foi enviada com Sucesso ! Deseja enviar outra mensagem ?'
 			);
 			res.redirect('/contato');
 		} else {
@@ -61,6 +44,4 @@ exports.postContato = (req, res) => {
 		console.log(error);
 		res.redirect('/');
 	}
-
-	res.redirect('back');
 };
