@@ -35,7 +35,7 @@ class messagesService {
 			);
 			return;
 		}
-
+		this.body.date = new Date();
 		this.contact = await this.model.create(this.body);
 	}
 }

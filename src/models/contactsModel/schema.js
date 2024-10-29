@@ -18,7 +18,8 @@ const versionsSchema = {
 		clientName: { type: String, required: true },
 		clientEmail: { type: String, required: true },
 		clientCellphone: { type: String, required: true },
-		clientMessage: { type: String, required: true }
+		clientMessage: { type: String, required: true },
+		date: { type: Date, required: true }
 	})
 };
 
