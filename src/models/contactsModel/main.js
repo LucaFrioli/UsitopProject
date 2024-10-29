@@ -35,13 +35,17 @@ class messagesService {
 			);
 			return;
 		}
-		this.body.date = new Date().toLocaleString(`pt-BR`, {dateStyle: "full",timeStyle: "medium"});;
+
+		this.body.date = new Date().toLocaleString(`pt-BR`, {
+			dateStyle: 'full',
+			timeStyle: 'medium'
+		});
 
 		console.log(`
 ################################################################
-A informação que será grvada no banco de dados será a seguinte :
-################################################################
-`);
+A informação que será gravada no banco de dados será a seguinte :
+################################################################\n
+		`);
 		console.table(this.body);
 
 		this.contact = await this.model.create(this.body);
