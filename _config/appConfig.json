@@ -1,0 +1,7 @@
+{
+	"logger" :{
+		"type" : ["prod", "dev"],
+		"enable" : true,
+		"level" : "info"
+	}
+}
