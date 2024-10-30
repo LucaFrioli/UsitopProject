@@ -1,7 +1,7 @@
 {
 	"name": "usitopproject",
 	"version": "1.0.0",
-	"description": "",
+	"description": "**Obs: pesquisar minificador ou plugin para css, pesquisar e calcular usos de mongodb ou mysql/mariadb, financeiramente e ou tecnicamente, considerando curva de aprendizado e deadline do projeto.**",
 	"main": "app.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
