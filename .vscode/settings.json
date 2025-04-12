@@ -14,5 +14,8 @@
 		"typescript",
 		"typescriptreact"
 	],
-	"files.autoSave": "afterDelay"
+	"files.autoSave": "afterDelay",
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	}
 }
