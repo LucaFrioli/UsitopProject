@@ -14,21 +14,11 @@ import 'regenerator-runtime/runtime'; // linha para otimização de código e in
 
 // chamada para arquivos js
 import { sentinelScreenSize } from './productsPage/responsivenessControl';
-import { addingInfo } from './productsPage/readMore';
 import { formSubmit } from './contactPage/validators';
 
 if (window.location.href === 'http://localhost:3000/produtos') {
 	// função para ficar de sentinela em relação ao tamnaho da tela, ela averigurá o tamnho, e em determinada condição trocará a lista de clsses dos cards de apresentação de produto da página
 	sentinelScreenSize();
-
-	// controla a vizualização das informações de cada card
-	const section = document.querySelector('#productsInformationsSection');
-	const buttons = section.querySelectorAll('button.readMore');
-	buttons.forEach((el) => {
-		el.addEventListener('click', () => {
-			addingInfo(el);
-		});
-	});
 }
 
 if (window.location.href === 'http://localhost:3000/contato') {
